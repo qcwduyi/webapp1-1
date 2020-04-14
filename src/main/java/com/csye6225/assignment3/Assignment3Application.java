@@ -26,7 +26,7 @@ public class Assignment3Application {
 
     public static void main(String[] args) {
 
-        postConstruct();
+        new Assignment3Application().postConstruct();
         AutoGenerator auto =  new AutoGenerator();
         auto.createDatabaseTable();
         //auto.createDatabaseTableConnection();
