@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("params")
 public class Params {
     public String trustStorePath="/home/ubuntu/truststore.jks";
-    public String trustStorePassword="123456";
+    public String trustStorePassword="1234567";
     public String defaultType="JKS";
 }
