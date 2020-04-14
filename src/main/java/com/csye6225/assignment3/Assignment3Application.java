@@ -27,7 +27,6 @@ public class Assignment3Application {
 
     public static void main(String[] args) {
 
-        new Assignment3Application().postConstruct();
         AutoGenerator auto =  new AutoGenerator();
         auto.createDatabaseTable();
         //auto.createDatabaseTableConnection();
@@ -35,6 +34,7 @@ public class Assignment3Application {
         SpringApplication.run(Assignment3Application.class, args);
     }
 
+    @PostConstruct
     void postConstruct(){
         File trustStoreFilePath = new File(params.trustStorePath);
         String tsp = trustStoreFilePath.getAbsolutePath();
@@ -45,3 +45,4 @@ public class Assignment3Application {
     }
 
 }
+
