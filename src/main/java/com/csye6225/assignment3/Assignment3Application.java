@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @SpringBootApplication
+@EnableScheduling
 public class Assignment3Application {
 
     @Autowired
