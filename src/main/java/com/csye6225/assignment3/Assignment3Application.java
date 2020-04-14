@@ -27,6 +27,8 @@ public class Assignment3Application {
 
     public static void main(String[] args) {
 
+        System.setProperty("javax.net.ssl.trustStore", "/home/ubuntu/truststore.jks");
+        System.setProperty("javax.net.ssl.trustStorePassword", "123456");
         AutoGenerator auto =  new AutoGenerator();
         auto.createDatabaseTable();
         //auto.createDatabaseTableConnection();
@@ -34,7 +36,6 @@ public class Assignment3Application {
         SpringApplication.run(Assignment3Application.class, args);
     }
 
-    @PostConstruct
     void postConstruct(){
         File trustStoreFilePath = new File(params.trustStorePath);
         String tsp = trustStoreFilePath.getAbsolutePath();
@@ -45,4 +46,5 @@ public class Assignment3Application {
     }
 
 }
+
 
