@@ -27,6 +27,9 @@ public class Assignment3Application {
 
     public static void main(String[] args) {
 
+        System.setProperty("javax.net.ssl.trustStore", tsp);
+        System.setProperty("javax.net.ssl.trustStorePassword", params.trustStorePassword);
+        System.setProperty("javax.net.ssl.keyStoreType", params.defaultType);
         AutoGenerator auto =  new AutoGenerator();
         auto.createDatabaseTable();
         //auto.createDatabaseTableConnection();
