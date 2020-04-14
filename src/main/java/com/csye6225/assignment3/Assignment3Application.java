@@ -27,6 +27,8 @@ public class Assignment3Application {
 
     public static void main(String[] args) {
 
+        File trustStoreFilePath = new File(params.trustStorePath);
+        String tsp = trustStoreFilePath.getAbsolutePath();
         System.setProperty("javax.net.ssl.trustStore", tsp);
         System.setProperty("javax.net.ssl.trustStorePassword", params.trustStorePassword);
         System.setProperty("javax.net.ssl.keyStoreType", params.defaultType);
